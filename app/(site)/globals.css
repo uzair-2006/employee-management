@@ -1,0 +1,9 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+.blur {
+    filter: blur(5px);
+    /* Adjust the blur intensity as needed */
+}
