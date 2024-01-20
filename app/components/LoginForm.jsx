@@ -36,6 +36,10 @@ const LoginForm = () => {
                 if (response.error) {
                     setLoading(false)
                     toast.error('Invalid Username Or Password');
+                } else if (!response) {
+                    setLoading(false)
+                    toast.error('not connecting to db');
+
                 } else {
                     toast.success('Authentication successful');
                     router.replace(`/dashboard/`);
