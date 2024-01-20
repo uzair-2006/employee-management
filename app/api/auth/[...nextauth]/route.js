@@ -66,7 +66,7 @@ export const authOptions = {
     },
     secret: process.env.NEXTAUTH_SECRET,
     pages: {
-        signIn: "employee-management-green.vercel.app/",
+        signIn: "/",
     }
 }
 const handler = NextAuth(authOptions);
