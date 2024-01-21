@@ -6,12 +6,12 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mongodb"
   url      = env("DATABASE_URL")
 }
 
 model User {
-  id    String     @unique @id @default(uuid())
+  id    String     @id @default(auto()) @map("_id") @db.ObjectId
   email String  @unique
   name  String
   password String
@@ -21,7 +21,7 @@ model User {
 }
 
 model Employee {
-  id    String     @id @default(uuid())
+  id    String     @id @default(auto()) @map("_id") @db.ObjectId
   name     String
   address   String?
   email String @unique
@@ -38,7 +38,7 @@ model Employee {
   sickLeaveBalance    Int?
   position      String?
   creator    User    @relation(fields: [creatorId], references: [id])
-  creatorId  String
+  creatorId  String  @db.ObjectId
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt  
 }

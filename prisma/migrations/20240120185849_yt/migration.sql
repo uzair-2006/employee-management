@@ -1,4 +1,0 @@
--- AlterTable
-ALTER TABLE "Employee" ALTER COLUMN "phoneNumber" SET DATA TYPE TEXT,
-ALTER COLUMN "basicSalary" SET DATA TYPE TEXT,
-ALTER COLUMN "emergencyContactNumber" SET DATA TYPE TEXT;
