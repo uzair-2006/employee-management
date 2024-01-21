@@ -24,7 +24,7 @@ model Employee {
   id    String     @id @default(uuid())
   name     String
   address   String?
-  email String @unique
+  email String 
   phoneNumber String?
   basicSalary String
   status        String?

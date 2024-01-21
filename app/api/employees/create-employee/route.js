@@ -16,7 +16,8 @@ export async function POST(req) {
         }
         const isEmployeewithPhone = await prisma.employee.findFirst({
             where: {
-                phoneNumber: phone
+                phoneNumber: phone,
+                creatorId: id,
             }
         })
         if (isEmployeewithPhone) {
