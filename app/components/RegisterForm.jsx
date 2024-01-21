@@ -40,7 +40,6 @@ const RegisterForm = () => {
                             headers: {
                                 'Accept': 'application/json',
                                 'Content-Type': 'application/json',
-                                'Access-Control-Allow-Origin': 'https://employee-management-green.vercel.app',
                             },
                             method: "POST",
                             body: JSON.stringify(data)
