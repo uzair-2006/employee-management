@@ -4,7 +4,9 @@
     {
       "src": "/api/*",
       "methods": ["GET", "POST", "PUT", "DELETE"],
-      "allow": ["https://employee-management-green.vercel.app/"]
+      "headers": {
+        "Access-Control-Allow-Origin": "https://your-nextjs-app.vercel.app"
+      }
     }
   ]
 }
